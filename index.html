@@ -5,10 +5,218 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./index.css">
-    <script src="./index.js"></script>
-    <title>Document</title>
+    <script type="module" src="./index.js"></script>
+    <script src="https://kit.fontawesome.com/80f60694e5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title> Team B e-commerce</title>
 </head>
 <body>
-    
+    <!---Header Section-->
+    <header>
+        <div class="welcome-div">
+            <!--to contain welcome message for customer and log in button-->
+        </div>
+            
+        <div class="header">
+            <!--container containing the logo and the nav menu-->
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="./images/logo/logo-2.png" alt="logo">
+                </div>
+                    <div class="nav-menu">
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li ><a href="#" id="shop-dropdown">CATEGORIES<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                                <!--drop-down menu for categories-->
+                                <div class="categories-sub-menu">
+                                    <div class="drop-down-img">
+                                        <img src="./images/general/gadgets.jpg" alt="electronic-gadgets">
+                                    </div>
+                                    <div class="computer">
+                                        <h4>COMPUTER</h4>
+                                        <ul>
+                                            <li><a href="#">Desktop</a></li>
+                                            <li><a href="#">Laptop</a></li>
+                                            <li><a href="#">Keyboard</a></li>
+                                            <li><a href="#">Monitor</a></li>
+                                            <li><a href="#">Mouse</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="fashion">
+                                        <h4>FASHION</h4>
+                                        <ul>
+                                            <li><a href="#">Men Shoe</a></li>
+                                            <li><a href="#">Women Shoe   </a></li>
+                                            <li><a href="#">Shirt Men</a></li>
+                                            <li><a href="#">Shirt Women</a></li>
+                                            <li><a href="#">Face Cap</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="electronics">
+                                        <h4>APPLIANCES</h4>
+                                        <ul>
+                                            <li><a href="#">Blender</a></li>
+                                            <li><a href="#">CCTV</a></li>
+                                            <li><a href="#">Microwave</a></li>
+                                            <li><a href="#">Pressing Iron</a></li>
+                                            <li><a href="#">Home Theater</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="#">SHOP</a></li>
+                            <li><a href="#">HELP</a></li>    
+                        </ul>
+                    </div>
+            </div>
+            <!--container for search bar and cart icon -->
+            <div class="cart-icon-container">
+                <div class="search-btn">
+                        <input type="text" placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping" title="Cart"></i><span>$0.00</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Start of body section of the web page -->
+
+    <!--Image slider div-->
+    <!-- Slider main container -->
+    <div class="slider-container">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide first-slider" style="display: flex; align-items: center;">
+            <div class="slider-content">
+                <h1>SALE <br> <span> UP TO 70% </span></h1>
+                <h3>DISCOVER THE LATEST <br> MEN'S STYLE TRENDS</h3>
+                <button>SHOP NOW</button>
+            </div> 
+          </div>
+          <div class="swiper-slide second-slider" style="display: flex; align-items: center;">
+                <div class="slider-content">
+                    <h3> HOT TRENDS</h3>
+                    <h1>ELEVATE YOUR <br> WARDROBE</h1>  
+                    <button>SHOP NOW</button>
+                </div> 
+          </div>
+          <div class="swiper-slide third-slider" style="display: flex; align-items: center;" >
+            <div class="slider-content">
+                <h1>50% OFF </h1>
+                <h3>UPGRADE YOUR HOME <br> WITH PREMIUM ELECTRONICS</h3>
+                <button>SHOP NOW</button>
+            </div> 
+        </div>
+        </div>
+        <!--swiper pagination bullets-->
+        <div class="swiper-pagination"></div>      
+    </div>
+       <!--div for category-->
+        <div class="featured-products">
+                <h1>Featured Products</h1>
+                <div class="category">
+                    <button class="all-btn"><a href="#">All</a></button>
+                    <button><a href="#">Men's Clothing</a></button>
+                    <button><a href="#">Electronics</a></button>
+                    <button><a href="#">Computer</a></button>
+                    <button><a href="#">Women's Wear</a></button>
+                </div>
+            
+        </div>
+             <!--div for products-->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper mySwipper-wrapper">
+                        <div class="swiper-slide product-slide" >
+                            <img src="./images/Shoe men/black_shoe_for_men.png">
+                            <div class="item-price">
+                                <p>Men Shoe Black</p>
+                                    <p class="price">$100</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Shirt women/shirt_women_2.png">
+                            <div class="item-price">
+                                <p>Shirt Women</p>
+                                    <p class="price">$50</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Computer/keyboard-removebg.png">
+                            <div class="item-price">
+                                <p>Keyboard and Mouse</p>
+                                    <p class="price">$20</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Home-gadgets/Home_theatre_3.png">
+                            <div class="item-price">
+                                <p>Home Theater</p>
+                                    <p class="price">$200</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/shirt men/shirt_men_2.png">
+                            <div class="item-price">
+                                <p>Long-sleeve Men</p>
+                                    <p class="price ">$40</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Shoe women/shoe_for_women_3.png">
+                            <div class="item-price">
+                                <p>Women Shoe</p>
+                                    <p class="price">$50</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Home-gadgets/headset-1.png">
+                            <div class="item-price">
+                                <p>Headset</p>
+                                    <p class="price">$30</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Computer/laptop 1.png">
+                            <div class="item-price">
+                                <p>Hp Laptop</p>
+                                    <p class="price">$150</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Home-gadgets/TV.png">
+                            <div class="item-price">
+                                <p>Smart TV</p>
+                                    <p class="price">$100</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product-slide">
+                            <img src="./images/Fashion/apple watch.png">
+                            <div class="item-price">
+                                <p>Apple Watch</p>
+                                    <p class="price">$100</p>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>      
+                
+                <!--Sign-up for newsletter div-->
+                <div class="newsletter-container">
+                    <div class="newsletter">
+                        <h1>Sign Up Newsletter</h1>
+                        <p>Join our newsletter and stay up-to-date with the latest trends, exclusive offers, 
+                        and new product launches! <br>Sign up now and never miss a sale or special promotion again.</p>
+                        <form action="" method="post" id="newsletter-form" >
+                            <input type="email"  placeholder="Your email address..." id="email-form" required>
+                            <input type="submit" value="Subscribe" class="btn">
+                        </form>
+                    </div>
+                </div>
+
+
 </body>
 </html>
