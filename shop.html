@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./shop.css">
+    <script src="https://kit.fontawesome.com/80f60694e5.js" crossorigin="anonymous"></script>
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="welcome-div">
+            <!--to contain welcome message for customer and log in button-->
+        </div>
+            
+        <div class="header">
+            <!--container containing the logo and the nav menu-->
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="./images/logo/logo-2.png" alt="logo">
+                </div>
+                    <div class="nav-menu">
+                        <ul>
+                            <li><a href="./index.html">HOME</a></li>
+                            <li ><a href="#" id="shop-dropdown">CATEGORIES<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                                <!--drop-down menu for categories-->
+                                <div class="categories-sub-menu">
+                                    <div class="drop-down-img">
+                                        <img src="./images/general/gadgets.jpg" alt="electronic-gadgets">
+                                    </div>
+                                    <div class="computer">
+                                        <h4>COMPUTER</h4>
+                                        <ul>
+                                            <li><a href="#">Desktop</a></li>
+                                            <li><a href="#">Laptop</a></li>
+                                            <li><a href="#">Keyboard</a></li>
+                                            <li><a href="#">Monitor</a></li>
+                                            <li><a href="#">Mouse</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="fashion">
+                                        <h4>FASHION</h4>
+                                        <ul>
+                                            <li><a href="#">Men Shoe</a></li>
+                                            <li><a href="#">Women Shoe   </a></li>
+                                            <li><a href="#">Shirt Men</a></li>
+                                            <li><a href="#">Shirt Women</a></li>
+                                            <li><a href="#">Face Cap</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="electronics">
+                                        <h4>APPLIANCES</h4>
+                                        <ul>
+                                            <li><a href="#">Blender</a></li>
+                                            <li><a href="#">CCTV</a></li>
+                                            <li><a href="#">Microwave</a></li>
+                                            <li><a href="#">Pressing Iron</a></li>
+                                            <li><a href="#">Home Theater</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="./shop.html">SHOP</a></li>
+                            <li><a href="#">HELP</a></li>    
+                        </ul>
+                    </div>
+            </div>
+            <!--container for search bar and cart icon -->
+            <div class="cart-icon-container">
+                <div class="search-btn">
+                        <input type="text" placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping" title="Cart"></i><span>$0.00</span>
+                </div>
+            </div>
+        </div>
+    </header>
+        <div  class="our-products">
+            <h2>Our Products</h2>
+            <p>Here you can check out our new products with fair price on NetMart.</p>
+        </div>
+        <!--products-->
+        <div class="products-container">
+            <div class="product-wrapper">
+                    <div class="product">
+                        <img src="./images/Shoe men/shoe-1.png" alt="">
+                        <div class="price-container">
+                            <p>Brown Sneakers</p>
+                            <p class="price">$50</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product">
+                            <img src="./images/shirt men/shirt_men_2.png" alt="">
+                            <div class="price-container">
+                                <p>Long-sleeve Men</p>
+                                <p class="price">$40</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Shoe men/shoe-2.png" alt="">
+                        <div class="price-container">
+                            <p>Brown Leather</p>
+                            <p class="price">$70</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/shirt men/shirt-1.png" alt="">
+                        <div class="price-container">
+                            <p>Shirt 3 in 1</p>
+                            <p class="price">$100</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Fashion/cap.PNG" alt="">
+                        <div class="price-container">
+                            <p>Face Cap</p>
+                            <p class="price">$10</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Shoe women/shoe_for_women_3.png" alt="">
+                        <div class="price-container">
+                            <p>Women Heels</p>
+                            <p class="price">$50</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Fashion/apple watch.png" alt="">
+                        <div class="price-container">
+                            <p>Apple Watch</p>
+                            <p class="price">$100</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Shirt women/shirt_women_2.png" alt="">
+                        <div class="price-container">
+                            <p>Shirt women</p>
+                            <p class="price">$50</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/pressing_iron.png" alt="">
+                        <div class="price-container">
+                            <p>Pressing Iron</p>
+                            <p class="price">$30</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/generator_2.png" alt="">
+                        <div class="price-container">
+                            <p>FIRMAN Generator</p>
+                            <p class="price">$200</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/shirt men/shirt_men-3.png" alt="">
+                        <div class="price-container">
+                            <p>Shirt Men</p>
+                            <p class="price">$50</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/blender.png" alt="">
+                        <div class="price-container">
+                            <p>Elegant Heels</p>
+                            <p class="price">$10</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/headset-1.png" alt="">
+                        <div class="price-container">
+                            <p>Headset</p>
+                            <p class="price">$30</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/Home_theatre-2.png" alt="">
+                        <div class="price-container">
+                            <p>Home Theatre</p>
+                            <p class="price">$80</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/small-oven.png" alt="">
+                        <div class="price-container">
+                            <p>Small Oven</p>
+                            <p class="price">$200</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/TV.png" alt="">
+                        <div class="price-container">
+                            <p>Smart TV</p>
+                            <p class="price">$100</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Computer/mouse-1.png" alt="">
+                        <div class="price-container">
+                            <p>Wireless Mouse</p>
+                            <p class="price">$30</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Computer/laptop 1.png" alt="">
+                        <div class="price-container">
+                            <p>HP Laptop</p>
+                            <p class="price">$150</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Computer/printer_2.png" alt="">
+                        <div class="price-container">
+                            <p>Deskjet Printer</p>
+                            <p class="price">$90</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./images/Home-gadgets/play_station_5.png" alt="">
+                        <div class="price-container">
+                            <p>Play Station 5</p>
+                            <p class="price">$200</p>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+        
+     <!--Start of Footer section-->
+     <div class="footer">
+        <div class="footer-logo">
+            <div class="footer-logo-content">
+                <img src="./images/logo/logo-2.png">
+                <p>
+                    NetMart business concept is to offer quality products at the best price. 
+                    Market has since it was founded in 2023 grown into one of the world's leading 
+                    online stores.
+                </p>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="service-container">
+            <div class="card">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Free Shipping</h3>
+                <p>Free Shipping On All UK Orders</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3>Money Guarantee</h3>
+                <p>30 Days Money Back Guarantee</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Support 24/7</h3>
+                <p>We Support Online 24/7</p>
+            </div>
+        </div>
+        <div class="payment-methods">
+                <img src="./images/general/payment_options.png">
+                <p class="">NetMart &copy; 2023. All Rights Reserved. Designed by <span>Team B</span></p>
+        </div>
+</div>
+</body>
+</html>
