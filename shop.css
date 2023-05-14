@@ -230,18 +230,95 @@ header{
     color: var(--main-color);
 }
 
+/*style for product details div */
+.product-details {
+        visibility: hidden;
+        position: fixed;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 75vh;
+        max-height: 75vh;
+        overflow-y: scroll;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: visibility 0.2s ease-in-out;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+}
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .product-image, 
+  .product-info {
+    height: 75vh;
+  }
 
+.product-info {
+    padding: 20px 20px;
+}
+.product-info > * {
+    margin-top: 20px;
+}
+.product-info h2 {
+    font-family: Poppins;
+}
+.product-info .price {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Poppins;
+} 
+.product-info  select {
+    font-family: Poppins;
+    padding: 5px;
 
-
-
-
-
-
-
-
-
-
-
+}
+.product-info  select:focus {
+    outline: none;
+}
+.product-info input[type=number] {
+    width: 10%;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+}
+.product-info input[type=number]:focus {
+    outline: none;
+}
+.product-info button {
+    border: none;
+    width: 30%;
+    height: 45px;
+    background-color: var(--main-color);
+    color: white;
+    font-family: Poppins;
+    cursor: pointer;
+} 
+.product-info .p-details {
+    font-family: Poppins;
+    font-weight: bold;
+}
+.product-info .details {
+    font-family: Poppins; 
+}
+.product-image img {
+    height: 70%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
 
 
 
