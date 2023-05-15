@@ -1,4 +1,5 @@
-const details = [
+document.addEventListener('DOMContentLoaded', function(){
+        const details = [
     {
         'id' : 1, 
         'title' : "Brown Sneakers", 
@@ -101,63 +102,49 @@ const details = [
     },
 
     ]
-const ProductDiv = document.querySelectorAll('.product')
-const productDetails = document.getElementById('product-details')
-const overLay = document.getElementById('overlay')
+    const ProductDiv = document.querySelectorAll('.product')
+    const productDetails = document.getElementById('product-details')
+    const overLay = document.getElementById('overlay')
+    
 
-ProductDiv.forEach( div => {
-    div.addEventListener('click', showProductDetailsDiv)
-})
 
-function showProductDetailsDiv (event) {
-    productDetails.style.visibility = 'visible'
-    overLay.style.display = 'block'
-    const product = event.target.closest(".product");
-    const title = product.querySelector('.price-container p').innerText
-    const price = product.querySelector('.price-container .price').innerText
-    const image = product.querySelector('img').src 
-    productId = Number(product.id)
-    const filteredDetails = details.filter(detail => detail.id === productId);
-    if (productId === 2 || productId === 4 || productId === 8 || productId == 11) {
-        productDetails.innerHTML = ` 
-    <div class="product-image">
-        <img src= ${image}>    
-    </div>
-        <div class="product-info">
-            <h2>${title}</h2>
-            <p class="price">${price}</p>
-            <select class = 'shirtSize'>
-                <option>Select Size</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-                <option>XXL</option>
-            </select> <br>
-            <input type="number" value="1">
-            <button>ADD TO CART</button>
-                <p class="p-details">Product Details</p>
-                <p class="details">
-                    ${filteredDetails[0].message}
-                </p>
-        </div>`
 
-    }
-        
-    else if ( productId === 1 || productId === 3 || productId === 6 ) {
-        productDetails.innerHTML = ` 
+    ProductDiv.forEach( div => {
+        div.addEventListener('click', showProductDetailsDiv)
+    })
+
+    productDetails.addEventListener('click', function (event) {
+        if (event.target.id === 'close') {
+          productDetails.style.visibility = 'hidden';
+          overLay.style.display = 'none';
+        }
+      });
+
+
+    function showProductDetailsDiv (event) {
+        productDetails.style.visibility = 'visible'
+        overLay.style.display = 'block'
+        const product = event.target.closest(".product");
+        const title = product.querySelector('.price-container p').innerText
+        const price = product.querySelector('.price-container .price').innerText
+        const image = product.querySelector('img').src  
+        productId = Number(product.id)
+        const filteredDetails = details.filter(detail => detail.id === productId);
+        if (productId === 2 || productId === 4 || productId === 8 || productId == 11) {
+            productDetails.innerHTML = ` 
         <div class="product-image">
+        <i class="fa-solid fa-xmark" id='close'></i>
             <img src= ${image}>    
         </div>
             <div class="product-info">
-                <h2>${title}</h2>
+                <h2>${title}</h2> 
                 <p class="price">${price}</p>
                 <select class = 'shirtSize'>
                     <option>Select Size</option>
-                    <option>EU 40</option>
-                    <option>EU 41</option>
-                    <option>EU 42</option>
-                    <option>EU 43</option>
-                    <option>EU 44</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
                 </select> <br>
                 <input type="number" value="1">
                 <button>ADD TO CART</button>
@@ -166,25 +153,53 @@ function showProductDetailsDiv (event) {
                         ${filteredDetails[0].message}
                     </p>
             </div>`
-    }
-    else {
-        productDetails.innerHTML = ` 
-    <div class="product-image">
-        <img src= ${image}>    
-    </div>
-        <div class="product-info">
-            <h2>${title}</h2>
-            <p class="price">${price}</p>
-            <input type="number" value="1">
-            <button>ADD TO CART</button>
-                <p class="p-details">Product Details</p>
-                <p class="details">
-                    ${filteredDetails[0].message}
-                </p>
-        </div>`
 
-    }
-       
+        }
+            
+        else if ( productId === 1 || productId === 3 || productId === 6 ) {
+            productDetails.innerHTML = ` 
+            <div class="product-image">
+            <i class="fa-solid fa-xmark" id='close'></i>
+                <img src= ${image}>    
+            </div>
+                <div class="product-info">
+                    <h2>${title}</h2>
+                    <p class="price">${price}</p>
+                    <select class = 'shirtSize'>
+                        <option>Select Size</option>
+                        <option>EU 40</option>
+                        <option>EU 41</option>
+                        <option>EU 42</option>
+                        <option>EU 43</option>
+                        <option>EU 44</option>
+                    </select> <br>
+                    <input type="number" value="1">
+                    <button>ADD TO CART</button>
+                        <p class="p-details">Product Details</p>
+                        <p class="details">
+                            ${filteredDetails[0].message}
+                        </p>
+                </div>`
+        }
+        else {
+            productDetails.innerHTML = ` 
+        <div class="product-image">
+        <i class="fa-solid fa-xmark" id='close'></i>
+            <img src= ${image}>    
+        </div>
+            <div class="product-info">
+                <h2>${title}</h2>
+                <p class="price">${price}</p>
+                <input type="number" value="1">
+                <button>ADD TO CART</button>
+                    <p class="p-details">Product Details</p>
+                    <p class="details">
+                        ${filteredDetails[0].message}
+                    </p>
+            </div>`
 
-} 
-   
+        }     
+
+    } 
+
+})
