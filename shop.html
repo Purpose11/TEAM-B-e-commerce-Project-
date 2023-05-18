@@ -12,7 +12,8 @@
 <body>
     <header>
         <div class="welcome-div">
-            <!--to contain welcome message for customer and log in button-->
+            <p>Welcome Customer</p>
+            <a href="./log-In.html">Login</a>
         </div>
             
         <div class="header">
@@ -74,7 +75,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <div class="cart-icon">
-                    <i class="fa-solid fa-cart-shopping" title="Cart"><span class="count">10</span></i>
+                    <i class="fa-solid fa-cart-shopping" title="Cart" id="show-cart"><span id="count-item"></span></i>
                 </div>
             </div>
         </div>
@@ -230,9 +231,30 @@
             </div>
         </div>
 
+
+        <div class="hidden" id="shopping-cart">
+           <div class="my-cart">
+                <h3>My Cart</h3>
+            </div>
+                <div class="cart-item-container" id="cart-item-container">
+                    <!--item added to dynamically-->
+                </div>
+           
+            <div class="my-total">
+                <h3>Total</h3>
+                <p id="total">$000</p>
+            </div>
+            <button id="checkout-btn">PURCHASE</button>
+        </div>
+
+            <!---product-details div-->
         <div class="product-details" id="product-details">
         </div>
         <div class="overlay" id="overlay"></div>
+
+            <!--cart-->
+            
+
      <!--Start of Footer section-->
      <div class="footer">
         <div class="footer-logo">

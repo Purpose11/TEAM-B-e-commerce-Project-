@@ -23,6 +23,24 @@
     max-width: 100%;
     height: 50px;
     background-color: var(--border-color);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.welcome-div > * {
+    margin-left: 20px;
+}
+.welcome-div p {
+    font-family: Poppins;
+    border-right: 1px solid black;
+    padding: 0 10px;
+}
+.welcome-div a {
+    text-decoration: none;
+    font-family: Poppins;
+    color: black;
+    padding: 0 10px;
+    margin-left: 10px;
 }
 header{
     position: relative;

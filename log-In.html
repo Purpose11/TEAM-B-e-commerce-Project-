@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./log-in.css">
+    <title>Log In</title>
+</head>
+<body>
+
+    <img src="./images/logo/logo-2.png">
+    <div class="form-container">
+            <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator">
+            </div>
+
+            <form action="#" method="" id="loginForm">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button type="submit" class="btn">Login</button>
+                <a href="">Forgot password?</a>
+            </form>
+            
+            <form action="#" method="" id="RegForm">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Username">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button type="submit" class="btn">Register</button>
+            </form>
+    </div>
+
+
+    <script>
+
+        const LoginForm = document.getElementById('loginForm')
+        const RegForm = document.getElementById('RegForm')
+        const Indicator = document.getElementById('Indicator')
+
+        function register (){
+            RegForm.style.transform = 'translateX(0px)'
+            LoginForm.style.transform = 'translateX(0px)'
+            Indicator.style.transform = 'translateX(100px)'
+        }
+        function login (){
+            RegForm.style.transform = 'translateX(300px)'
+            LoginForm.style.transform = 'translateX(300px)'
+            Indicator.style.transform = 'translateX(0px)'
+        }
+    </script>
+</body>
+</html>
