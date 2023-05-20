@@ -300,3 +300,4 @@ const dropDown =  document.getElementById("shop-dropdown")
       closeMenu.addEventListener('click', function (){
         menu.style.left = '-105%'
     })
+    console.log(closeMenu)

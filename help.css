@@ -180,9 +180,15 @@ header{
     line-height: 35px;
     width: 100%;
 }
+#bar {
+    display: none;
+}
 .categories-sub-menu ul li a{
     font-size: 17px;
     font-family: Poppins;
+}
+#close-menu {
+    display: none;
 }
 /* end of styling for header section */
 
@@ -613,6 +619,12 @@ footer {
 .payment-methods p span {
     color: var(--main-color);
     font-weight: bold;
+}
+#close-menu {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
 

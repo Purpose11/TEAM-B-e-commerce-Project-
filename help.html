@@ -26,7 +26,7 @@
                 </div>
                     <div class="nav-menu">
                         <ul id="main-menu">
-                            <li><a href="./index.html">HOME <span><i class="fa-solid fa-xmark" id="close-menu"></i></span></a></li>
+                            <li><a href="./index.html" id="Home">HOME</a></li>
                             <li ><a href="#" id="shop-dropdown">CATEGORIES<i class="fa-sharp fa-solid fa-caret-down"></i></a>
                                 <!--drop-down menu for categories-->
                                 <div class="categories-sub-menu">
@@ -66,7 +66,9 @@
                                 </div>
                             </li>
                             <li><a href="./shop.html">SHOP</a></li>
-                            <li><a href="./help.html">HELP</a></li>    
+                            <li><a href="./help.html">HELP</a></li>  
+                            
+                            <i class="fa-solid fa-xmark" id="close-menu"></i>
                         </ul>
                     </div>
             </div>
@@ -197,11 +199,13 @@
                     const showMenu = document.getElementById('bar')
                     const menu = document.getElementById('main-menu')
                     const closeMenu = document.getElementById('close-menu')
+                    const HomeBtn = document.getElementById('Home')
 
                     showMenu.addEventListener('click', function (){
                         menu.style.left = '-5px'
                     })
 
+        
                     closeMenu.addEventListener('click', function (){
                         menu.style.left = '-105%'
                     })
