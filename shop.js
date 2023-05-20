@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
         {
             'id' : 4, 
             'title' : "Shirt 3 in 1", 
-            'message' :  " Stay cool and comfortable in our Men's Short Sleeve Button-Down Shirt. Made from [Material], this shirt features a relaxed fit with short sleeves and a classic button-down front. It is available in a range of [Color] colors and a variety of sizes, so you can find the perfect fit. Whether you're dressing up for a special occasion or keeping it casual on the weekend, this shirt is sure to be a versatile addition to your wardrobe.",
+            'message' :  " Stay cool and comfortable in our Men's Short Sleeve Button-Down Shirt.This shirt features a relaxed fit with short sleeves and a classic button-down front. It is available in a range of  colors and a variety of sizes, so you can find the perfect fit. Whether you're dressing up for a special occasion or keeping it casual on the weekend, this shirt is sure to be a versatile addition to your wardrobe.",
         },
         {
             'id' : 5, 
@@ -132,50 +132,67 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         });
 
-        //adding item to cart
-        productDetails.addEventListener('click', function (event) {
-
-            const addToCartBtn = event.target.closest('#add-to-cart-btn')
+    
+        productDetails.addEventListener('click', function(event) {
+            const addToCartBtn = event.target.closest('#add-to-cart-btn');
             if (addToCartBtn) {
-                quantityInput = addToCartBtn.parentNode.querySelector('#quantity')
-                    let itemQuantity = quantityInput.value
-                    if (  itemQuantity < 1) {
-                        itemQuantity = 1
-                    }
-
-                const itemPrice = parseFloat(price.replace('$', '')); 
-                let  totalPrice = itemQuantity * itemPrice;
-                totalPrice = "$" + totalPrice
-
-                let actualOverallPrice = overallTotalPrice.innerText
-                const newOverallTotal = parseFloat(actualOverallPrice.replace('$', ''))
-                const calcTotalPrice = parseFloat(totalPrice.replace('$', ''))
-                updatedOveralltotal = newOverallTotal + calcTotalPrice
-
-                overallTotalPrice.innerText = "$" + updatedOveralltotal;
-
-                console.log(updatedOveralltotal)
-
-                const myCart = document.createElement('div')
-                myCart.classList.add('cart-item')
-                    myCart.innerHTML = 
-                `<div class="cart-item">
-                    <img src=${image}>
-                    <p class="item-title">${title}</p>
-                    <p class="item-quantity">${itemQuantity}</p>
-                    <p class="item-price">${totalPrice}</p>
-                    <i class="fa-solid fa-trash"></i>
-                </div> `
-                alert('Item Added To Cart Sucessfully!')
-                cartItemContainer.appendChild(myCart)
-                productDetails.style.visibility = 'hidden';
-                overLay.style.display = 'none';
+              quantityInput = addToCartBtn.parentNode.querySelector('#quantity');
+              let itemQuantity = quantityInput.value;
+              if (itemQuantity < 1) {
+                itemQuantity = 1;
+              }
+          
+              const itemPrice = parseFloat(price.replace('$', ''));
+            
+              let totalPrice = itemQuantity * itemPrice;
+              totalPrice = "$" + totalPrice
+          
+              const myCart = document.createElement('div');
+        
+              myCart.innerHTML = `
+                <div class="cart-item">
+                  <img src=${image}>
+                  <p class="item-title">${title}</p>
+                  <p class="item-quantity">${itemQuantity}</p>
+                  <p class="item-price">${totalPrice}</p>
+                  <i class="fa-solid fa-trash deleteItem"></i>
+                </div>
+              `;
+          
+              const deleteButton = myCart.querySelector('.deleteItem');
+              deleteButton.addEventListener('click', function() {
+                myCart.remove();
                 numberOfItemsInCart.innerText = cartItemContainer.children.length;
-               
+                updateOverallTotal();
+              });
+              
+              alert('Item Added To Cart Successfully!');
+              cartItemContainer.appendChild(myCart);
+              productDetails.style.visibility = 'hidden';
+              overLay.style.display = 'none';
+              numberOfItemsInCart.innerText = cartItemContainer.children.length;
+              updateOverallTotal();
             }
 
-        });
 
+          });
+          
+          function updateOverallTotal() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            let total = 0;
+            cartItems.forEach((cartItem) => {
+              const itemPrice = parseFloat(cartItem.querySelector('.item-price').textContent.replace('$', ''));
+              const itemQuantity = parseInt(cartItem.querySelector('.item-quantity').textContent);
+              total += itemPrice * itemQuantity;
+            });
+            overallTotalPrice.innerText = "$" + total;
+          }
+          
+          
+          
+
+          
+    
         // functon to show the product details div 
         function showProductDetailsDiv (event) {
             productDetails.style.visibility = 'visible'
@@ -300,4 +317,4 @@ const dropDown =  document.getElementById("shop-dropdown")
       closeMenu.addEventListener('click', function (){
         menu.style.left = '-105%'
     })
-    console.log(closeMenu)
+   
