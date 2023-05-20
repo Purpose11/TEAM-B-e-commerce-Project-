@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function(){
               }
           
               const itemPrice = parseFloat(price.replace('$', ''));
+              
             
               let totalPrice = itemQuantity * itemPrice;
               totalPrice = "$" + totalPrice
@@ -181,9 +182,13 @@ document.addEventListener('DOMContentLoaded', function(){
             const cartItems = document.querySelectorAll('.cart-item');
             let total = 0;
             cartItems.forEach((cartItem) => {
-              const itemPrice = parseFloat(cartItem.querySelector('.item-price').textContent.replace('$', ''));
+              const itemPrice = parseInt(cartItem.querySelector('.item-price').textContent.replace('$', ''));
               const itemQuantity = parseInt(cartItem.querySelector('.item-quantity').textContent);
-              total += itemPrice * itemQuantity;
+              total += itemPrice;
+              console.log(cartItem)
+              console.log(itemPrice)
+              console.log(itemQuantity)
+              console.log(total)
             });
             overallTotalPrice.innerText = "$" + total;
           }
@@ -296,6 +301,10 @@ document.addEventListener('DOMContentLoaded', function(){
             cart.classList.remove('visible')
         })
         
+        const purchaseBtn = document.getElementById('checkout-btn')
+        purchaseBtn.addEventListener('click', ()=> {
+            alert("No backend Code Yet!")
+        })
          
       
 })
