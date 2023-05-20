@@ -12,8 +12,10 @@
 <body>
     <header>
         <div class="welcome-div">
-            <p>Welcome Customer</p>
-            <a href="./log-In.html">Login</a>
+            <div class="welcome-div">
+                <p>Welcome Customer</p>
+                <a href="./log-In.html">Login</a>
+            </div>
         </div>
             
         <div class="header">
@@ -23,8 +25,8 @@
                     <img src="./images/logo/logo-2.png" alt="logo">
                 </div>
                     <div class="nav-menu">
-                        <ul>
-                            <li><a href="./index.html">HOME</a></li>
+                        <ul id="main-menu">
+                            <li><a href="./index.html">HOME <span><i class="fa-solid fa-xmark" id="close-menu"></i></span></a></li>
                             <li ><a href="#" id="shop-dropdown">CATEGORIES<i class="fa-sharp fa-solid fa-caret-down"></i></a>
                                 <!--drop-down menu for categories-->
                                 <div class="categories-sub-menu">
@@ -34,31 +36,31 @@
                                     <div class="computer">
                                         <h4>COMPUTER</h4>
                                         <ul>
-                                            <li><a href="#">Desktop</a></li>
-                                            <li><a href="#">Laptop</a></li>
-                                            <li><a href="#">Keyboard</a></li>
-                                            <li><a href="#">Monitor</a></li>
-                                            <li><a href="#">Mouse</a></li>
+                                            <li><a href="./shop.html">Desktop</a></li>
+                                            <li><a href="./shop.html">Laptop</a></li>
+                                            <li><a href="./shop.html">Keyboard</a></li>
+                                            <li><a href="./shop.html">Monitor</a></li>
+                                            <li><a href="./shop.html">Mouse</a></li>
                                         </ul>
                                     </div>
                                     <div class="fashion">
                                         <h4>FASHION</h4>
                                         <ul>
-                                            <li><a href="#">Men Shoe</a></li>
-                                            <li><a href="#">Women Shoe   </a></li>
-                                            <li><a href="#">Shirt Men</a></li>
-                                            <li><a href="#">Shirt Women</a></li>
-                                            <li><a href="#">Face Cap</a></li>
+                                            <li><a href="./shop.html">Men Shoe</a></li>
+                                            <li><a href="./shop.html">Women Shoe   </a></li>
+                                            <li><a href="./shop.html">Shirt Men</a></li>
+                                            <li><a href="./shop.html">Shirt Women</a></li>
+                                            <li><a href="./shop.html">Face Cap</a></li>
                                         </ul>
                                     </div>
                                     <div class="electronics">
                                         <h4>APPLIANCES</h4>
                                         <ul>
-                                            <li><a href="#">Blender</a></li>
-                                            <li><a href="#">CCTV</a></li>
-                                            <li><a href="#">Microwave</a></li>
-                                            <li><a href="#">Pressing Iron</a></li>
-                                            <li><a href="#">Home Theater</a></li>
+                                            <li><a href="./shop.html">Blender</a></li>
+                                            <li><a href="./shop.html">CCTV</a></li>
+                                            <li><a href="./shop.html">Microwave</a></li>
+                                            <li><a href="./shop.html">Pressing Iron</a></li>
+                                            <li><a href="./shop.html">Home Theater</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -70,16 +72,14 @@
             </div>
             <!--container for search bar and cart icon -->
             <div class="cart-icon-container">
-                <div class="search-btn">
-                        <input type="text" placeholder="Search" id="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
                 <div class="cart-icon">
                     <i class="fa-solid fa-cart-shopping" title="Cart" id="show-cart"><span id="count-item"></span></i>
                 </div>
+                         <i class="fa-solid fa-bars" id="bar"></i>
             </div>
         </div>
     </header>
+
         <div  class="our-products">
             <h2>Our Products</h2>
             <p>Here you can check out our new products with fair price on NetMart.</p>
@@ -234,7 +234,7 @@
 
         <div class="hidden" id="shopping-cart">
            <div class="my-cart">
-                <h3>My Cart</h3>
+                <h3>My Cart <span id="closeCart"><i class="fa-solid fa-xmark"></i></span></h3>
             </div>
                 <div class="cart-item-container" id="cart-item-container">
                     <!--item added to dynamically-->

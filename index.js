@@ -7,8 +7,6 @@
           },
 
         pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: true,
         clickable: true,
         },
 
@@ -39,6 +37,26 @@
         
       });
 
+      const mediaQuery = window.matchMedia("(max-width: 767px)");
+
+      function handleMobileView(event) {
+        if (event.matches) {
+          // Adjust slidesPerView for mobile phones
+          swiper2.params.slidesPerView = 1;
+          swiper2.update();
+        } else {
+          // Revert back to default slidesPerView for larger screens
+          swiper2.params.slidesPerView = 3;
+          swiper2.update();
+        }
+      }
+
+      // Initial check for mobile view on page load
+      handleMobileView(mediaQuery);
+
+      // Register the event listener for screen size changes
+      mediaQuery.addListener(handleMobileView);
+
       //newsletter subscription 
       const newsLetterForm = document.getElementById('newsletter-form')
       const newsLetterContainer = document.querySelector('.newsletter')
@@ -64,4 +82,22 @@
         })
       }
 
-    
+     
+     const dropDown =  document.getElementById("shop-dropdown")
+     const subMenu = document.querySelector('.categories-sub-menu')
+      
+      dropDown.addEventListener('click', function () {
+        subMenu.classList.toggle('active')
+      })
+
+      const showMenu = document.getElementById('bar')
+      const menu = document.getElementById('main-menu')
+      const closeMenu = document.getElementById('close-menu')
+
+      showMenu.addEventListener('click', function (){
+          menu.style.left = '-5px'
+      })
+
+      closeMenu.addEventListener('click', function (){
+        menu.style.left = '-105%'
+    })

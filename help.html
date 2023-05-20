@@ -25,9 +25,9 @@
                     <img src="./images/logo/logo-2.png" alt="logo">
                 </div>
                     <div class="nav-menu">
-                        <ul>
-                            <li><a href="./index.html">HOME</a></li>
-                            <li ><a href="#featured-products" id="shop-dropdown">CATEGORIES<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                        <ul id="main-menu">
+                            <li><a href="./index.html">HOME <span><i class="fa-solid fa-xmark" id="close-menu"></i></span></a></li>
+                            <li ><a href="#" id="shop-dropdown">CATEGORIES<i class="fa-sharp fa-solid fa-caret-down"></i></a>
                                 <!--drop-down menu for categories-->
                                 <div class="categories-sub-menu">
                                     <div class="drop-down-img">
@@ -66,7 +66,7 @@
                                 </div>
                             </li>
                             <li><a href="./shop.html">SHOP</a></li>
-                            <li><a href="#">HELP</a></li>    
+                            <li><a href="./help.html">HELP</a></li>    
                         </ul>
                     </div>
             </div>
@@ -74,8 +74,9 @@
             <div class="cart-icon-container">
                 <div class="search-btn">
                         <input type="text" placeholder="Search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>    
                 </div>
+                         <i class="fa-solid fa-bars" id="bar"></i>
             </div>
         </div>
     </header>
@@ -185,6 +186,25 @@
                     }
                 });
                 });
+
+                const dropDown =  document.getElementById("shop-dropdown")
+                    const subMenu = document.querySelector('.categories-sub-menu')
+                    
+                    dropDown.addEventListener('click', function () {
+                        subMenu.classList.toggle('active')
+                    })
+
+                    const showMenu = document.getElementById('bar')
+                    const menu = document.getElementById('main-menu')
+                    const closeMenu = document.getElementById('close-menu')
+
+                    showMenu.addEventListener('click', function (){
+                        menu.style.left = '-5px'
+                    })
+
+                    closeMenu.addEventListener('click', function (){
+                        menu.style.left = '-105%'
+                    })
         </script>
 </body>
 </html>

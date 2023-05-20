@@ -274,5 +274,29 @@ document.addEventListener('DOMContentLoaded', function(){
 
         }
 
-    
+        const closeCart = document.getElementById('closeCart')
+        closeCart.addEventListener('click', function () {
+            cart.classList.remove('visible')
+        })
+        
+         
+      
 })
+const dropDown =  document.getElementById("shop-dropdown")
+     const subMenu = document.querySelector('.categories-sub-menu')
+      
+      dropDown.addEventListener('click', function () {
+        subMenu.classList.toggle('active')
+      })
+
+      const showMenu = document.getElementById('bar')
+      const menu = document.getElementById('main-menu')
+      const closeMenu = document.getElementById('close-menu')
+
+      showMenu.addEventListener('click', function (){
+          menu.style.left = '-5px'
+      })
+
+      closeMenu.addEventListener('click', function (){
+        menu.style.left = '-105%'
+    })
