@@ -1,20 +1,3 @@
-    //swiper js  for image-slider
-    const swiper = new Swiper('.slider-container', {
-        effect: "fade",
-        autoplay: {
-            delay: 3200,
-            disableOnInteraction: false,
-          },
-
-        pagination: {
-        clickable: true,
-        },
-
-        keyboard: {
-            enabled: true,
-          },
-        
-    });
 
     //swiper js for products div 
     const swiper2  = new Swiper(".mySwiper", {
